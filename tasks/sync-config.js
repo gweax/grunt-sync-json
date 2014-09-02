@@ -16,11 +16,11 @@ module.exports = function (grunt) {
             "indent": 2
         });
 
-        if (!options.hasOwnProperty("properties")) {
+        if (!options.hasOwnProperty("include")) {
             grunt.fail.warn("no properties to copy");
         }
 
-        if (!Array.isArray(options.properties)) {
+        if (!Array.isArray(options.include)) {
             grunt.fail.warn("properties is not an array");
         }
 
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
             var src = grunt.file.readJSON(f.src[0]),
                 dest = grunt.file.readJSON(f.dest) || {};
 
-            options.properties.forEach(function (property) {
+            options.include.forEach(function (property) {
                 // allow different keys in src and dest ("key_in_src as key_in_dest")
                 var names = property.split(/\s+as\s+/),
                     srcProp = names[0],

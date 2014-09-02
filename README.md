@@ -47,7 +47,7 @@ Default: `2`
 
 
 
-#### options.properties
+#### options.include
 Type: `Array<String>`
 
 An array of properties to copy from the source file to the destination file. You can also use a different property name for the destination file using `property_in_src as property_in_dest`.
@@ -62,7 +62,7 @@ grunt.initConfig({
   "sync-config": {
     "options": {
       "indent": 4,
-      'properties': [
+      'include': [
         'name',
         'description',
         'version',
@@ -83,4 +83,5 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+- 0.2.0 Rename `properties` to `include`
+- 0.1.0 Initial release

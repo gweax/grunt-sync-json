@@ -42,7 +42,7 @@ module.exports = function (grunt) {
             "custom-options": {
                 "options": {
                     "indent": 4,
-                    "properties": [
+                    "include": [
                         "foo",
                         "bar",
                         "baz"
