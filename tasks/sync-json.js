@@ -10,7 +10,7 @@
 
 module.exports = function (grunt) {
 
-    grunt.registerMultiTask("sync-config", "Keep various config files in sync (e.g. package.json and bower.json)", function () {
+    grunt.registerMultiTask("sync-json", "Keep various json files in sync (e.g. package.json and bower.json)", function () {
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
             "indent": 2
