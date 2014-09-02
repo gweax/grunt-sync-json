@@ -1,23 +1,23 @@
 {
-  "name": "grunt-sync-config",
-  "description": "Keep various config files in sync (e.g. package.json and bower.json)",
+  "name": "grunt-sync-json",
+  "description": "Keep various json files in sync (e.g. package.json and bower.json)",
   "version": "0.3.0",
-  "homepage": "https://github.com/gweax/grunt-sync-config",
+  "homepage": "https://github.com/gweax/grunt-sync-json",
   "author": {
     "name": "Matthias Reuter",
     "email": "matt@gweax.de"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/gweax/grunt-sync-config.git"
+    "url": "git://github.com/gweax/grunt-sync-json.git"
   },
   "bugs": {
-    "url": "https://github.com/gweax/grunt-sync-config/issues"
+    "url": "https://github.com/gweax/grunt-sync-json/issues"
   },
   "licenses": [
     {
       "type": "MPL-2.0",
-      "url": "https://github.com/gweax/grunt-sync-config/blob/master/LICENSE-MPL-2.0"
+      "url": "https://github.com/gweax/grunt-sync-json/blob/master/LICENSE-MPL-2.0"
     }
   ],
   "engines": {
@@ -39,6 +39,7 @@
   "keywords": [
     "gruntplugin",
     "json",
-    "sync"
+    "sync",
+    "synchronize"
   ]
 }
