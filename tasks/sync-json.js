@@ -13,7 +13,8 @@ module.exports = function (grunt) {
     grunt.registerMultiTask("sync-json", "Keep various json files in sync (e.g. package.json and bower.json)", function () {
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
-            "indent": 2
+            "indent": 2,
+            "newline": true
         });
 
         if (!options.hasOwnProperty("include")) {
@@ -35,7 +36,8 @@ module.exports = function (grunt) {
             }
 
             var src = grunt.file.readJSON(f.src[0]),
-                dest = grunt.file.readJSON(f.dest) || {};
+                dest = grunt.file.readJSON(f.dest) || {},
+                content;
 
             options.include.forEach(function (property) {
                 // allow different keys in src and dest ("key_in_src as key_in_dest")
@@ -48,7 +50,13 @@ module.exports = function (grunt) {
                 }
             });
 
-            grunt.file.write(f.dest, JSON.stringify(dest, null, options.indent));
+            content = JSON.stringify(dest, null, options.indent);
+
+            if (options.newline) {
+                content = content + "\n";
+            }
+
+            grunt.file.write(f.dest, content);
 
             // Print a success message.
             grunt.log.writeln('File "' + f.dest + '" in sync with ' + f.src[0] + '.');

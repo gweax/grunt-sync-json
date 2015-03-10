@@ -45,6 +45,11 @@ Please note, that `sync-json` cannot handle multiple input files. I would have l
 Type: `Number`
 Default: `2`
 
+#### options.newline
+Type: `Boolean`
+Default: `true`
+
+If set to true, the output file will end with a new line.
 
 
 #### options.include
