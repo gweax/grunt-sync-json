@@ -67,16 +67,16 @@ grunt.initConfig({
   "sync-json": {
     "options": {
       "indent": 4,
-      'include': [
-        'name',
-        'description',
-        'version',
-        'author as authors' // is 'author' in package.json, but 'authors' in bower.json
+      "include": [
+        "name",
+        "description",
+        "version",
+        "author as authors" // is "author" in package.json, but "authors" in bower.json
       ]
     },
     "bower": {
       files: {
-        'bower.json': 'package.json'
+        "bower.json": "package.json"
       }
     }
   },
@@ -88,6 +88,7 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+- 0.4.0 Add option to end destination file with a new line
 - 0.3.0 Rename task to `grunt-sync-json`
 - 0.2.0 Rename `properties` to `include`
 - 0.1.0 Initial release
